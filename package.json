@@ -1,0 +1,35 @@
+{
+  "name": "html-to-picture",
+  "version": "0.1.0",
+  "description": "把一个html变成图片。",
+  "main": "dist/html-to-picture.min.js",
+  "scripts": {
+    "start": "npm install && npm run dev",
+    "dev": "rollup --config rollup.config.js -i ./src/index.js -o ./docs/html-to-picture.js --watch",
+    "build": "nodejs -d dist && rollup --config rollup.config.js && terser ./dist/html-to-picture.js -o ./dist/html-to-picture.min.js && nodejs --config nodejs.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hai2007/html-to-picture.git"
+  },
+  "keywords": [
+    "color",
+    "picker"
+  ],
+  "author": "你好2007",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hai2007/html-to-picture/issues"
+  },
+  "homepage": "https://github.com/hai2007/html-to-picture#readme",
+  "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@hai2007/nodejs": "^2.0.1",
+    "@rollup/plugin-babel": "^5.2.1",
+    "rollup": "^1.17.0",
+    "rollup-plugin-commonjs": "^10.0.1",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "terser": "^4.1.2"
+  }
+}
