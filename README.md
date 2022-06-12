@@ -27,6 +27,12 @@ npm install --save html-to-picture
 import HtmlToPicture from 'html-to-picture';
 ```
 
+当然，你也可以使用CDN方式引入：
+
+```html
+<script src="https://unpkg.com/html-to-picture"></script>
+```
+
 接着，创建对象：
 
 ```js
@@ -42,6 +48,8 @@ htmlToPicture(html,width,height).then(base64=>{
 
 });
 ```
+
+下面是一个简单例子，你可以[点击此处](https://hai2007.github.io/SweetHome/#/editor?file=html-to-picture_demo1)进行查看！
 
 开源协议
 ---------------------------------------
