@@ -1,6 +1,6 @@
 {
   "name": "html-to-picture",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "把一个html变成图片。",
   "main": "dist/html-to-picture.min.js",
   "scripts": {
@@ -13,8 +13,11 @@
     "url": "git+https://github.com/hai2007/html-to-picture.git"
   },
   "keywords": [
-    "color",
-    "picker"
+    "image",
+    "html",
+    "canvas",
+    "svg",
+    "picture"
   ],
   "author": "你好2007",
   "license": "MIT",

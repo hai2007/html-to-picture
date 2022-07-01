@@ -44,7 +44,9 @@ let htmlToPicture = HtmlToPicture(config={
 然后，使用：
 
 ```js
-htmlToPicture(html,width,height).then(base64=>{
+// 第一个参数可以是html字符串或dom结点
+// 如果是dom结点，width和height可以不传递
+htmlToPicture(template｜el,width,height).then(base64=>{
 
 });
 ```

@@ -1,12 +1,23 @@
+import elToTemplate from './elToTemplate';
+
 let HtmlToPicture = function (config) {
 
     return function (html, width, height) {
+
+        if (typeof html != 'string') {
+
+            if (!width) width = html.offsetWidth;
+            if (!height) height = html.offsetHeight;
+
+            html = elToTemplate(html);
+
+        }
 
         let img = document.createElement('img');
 
         img.setAttribute('width', width);
         img.setAttribute('height', height);
-        img.setAttribute('src', `data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg'><foreignObject width='${width}' height='${height}' ><body xmlns='http://www.w3.org/1999/xhtml'>${html}</body></foreignObject></svg>`);
+        img.setAttribute('src', `data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' width='${width}' height='${height}'><foreignObject width='${width}' height='${height}' ><body style='margin:0px;' xmlns='http://www.w3.org/1999/xhtml'>${html}</body></foreignObject></svg>`);
 
         document.getElementsByTagName('body')[0].appendChild(img);
 

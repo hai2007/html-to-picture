@@ -5,16 +5,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>测试 | 主体</title>
+    <title>测试 | 传递html字符串</title>
     <script src="../dist/html-to-picture.js"></script>
+    <style>
+        img {
+            outline: 1px solid red;
+        }
+    </style>
 </head>
 
 <body>
 
+    <img id="img">
+
     <script>
 
-        HtmlToPicture()(`<input value='输入的内容' />`, 400, 400).then(base64 => {
+        HtmlToPicture()(`<input value='输入的内容' />`, 400, 50).then(base64 => {
             console.log(base64);
+            document.getElementById('img').setAttribute('src', base64)
         });
 
     </script>
